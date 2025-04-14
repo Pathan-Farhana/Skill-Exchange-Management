@@ -4,6 +4,8 @@ import './index.css'
 import App from './App.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ClerkProvider } from '@clerk/clerk-react';
+import ChatProvider from './contexts/ChatContext.jsx';
+
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 
@@ -14,6 +16,8 @@ if (!PUBLISHABLE_KEY) {
 
 createRoot(document.getElementById('root')).render(
   <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
+    <ChatProvider>
       <App />
-    </ClerkProvider>
+    </ChatProvider>
+  </ClerkProvider>
 )

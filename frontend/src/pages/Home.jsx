@@ -185,7 +185,8 @@
 
 
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useUser } from '@clerk/clerk-react';
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Home.css";
@@ -198,6 +199,7 @@ function Home() {
   const [selectedUser, setSelectedUser] = useState(null);
   const [showFeedbackModal, setShowFeedbackModal] = useState(false);
   const [feedbackRating, setFeedbackRating] = useState(0);
+  const navigate = useNavigate();
 
   const boyIcon = "https://cdn-icons-png.flaticon.com/512/236/236831.png";
   const girlIcon = "https://cdn-icons-png.flaticon.com/512/847/847971.png";
@@ -206,7 +208,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/users")
+      .get("http://localhost:8000/api/users") 
       .then((res) => setUsers(res.data))
       .catch((err) => console.error("Error fetching users:", err));
   }, []);
@@ -262,7 +264,10 @@ function Home() {
     }
   };
 
-  const handleMessage = () => {
+  const handleMessage = async () => {
+    console.log(selectedUser)
+    console.log(selectedUser.email)
+    
     alert(`Message sent to ${selectedUser.fullName}!`);
   };
 
@@ -319,7 +324,7 @@ function Home() {
             <button className="btn btn-success mt-3" onClick={() => setShowFeedbackModal(true)}>
               Give Feedback
             </button>
-            <button className="btn btn-primary mt-2 ms-2" onClick={handleMessage}>
+            <button className="btn btn-primary mt-2 ms-2" onClick={() => navigate(`/chat/${selectedUser.email}`)}>
               Message
             </button>
           </div>

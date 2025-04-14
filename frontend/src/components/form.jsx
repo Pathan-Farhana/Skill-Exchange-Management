@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { useNavigate } from "react-router-dom";
 const ProfileForm = () => {
-  const { user } = useUser('nsadfa');
+  const { user } = useUser();
 
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
@@ -57,7 +57,7 @@ const ProfileForm = () => {
       alert("User not found!");
       return;
     }
-
+    console.log(user.primaryEmailAddress.emailAddress)
     const userData = {
       clerkId: user.id,
       fullName: name,
@@ -65,6 +65,7 @@ const ProfileForm = () => {
       gender,
       skills,
       learnSkills,
+      email: user.primaryEmailAddress.emailAddress,
     };
 
     // try {

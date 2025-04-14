@@ -77,7 +77,7 @@ const SkillExchangeNavbar = () => {
             </Form>
             <Nav>
               <Nav.Link as={Link} to="/schedule">📅 Schedule</Nav.Link>
-              <Nav.Link as={Link} to="/messages">💬 Messages</Nav.Link>
+              <Nav.Link as={Link} to="/chat">💬 Messages</Nav.Link>
               <Nav.Link as={Link} to="/profile">👤 Profile</Nav.Link>
               <SignedOut><SignInButton /></SignedOut>
               <SignedIn><UserButton /></SignedIn>
