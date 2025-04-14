@@ -1,0 +1,97 @@
+/* Full height container centered */
+.profile-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(to right, #e0eafc, #cfdef3); */
+    padding-top: 70px;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  /* Flexbox outer wrapper */
+  .ContainerOuter {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Main card */
+  .profile-card {
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Input and button on same line */
+  .input-group-custom {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+  }
+  
+  .input-group-custom input {
+    flex: 1;
+    height: 45px;
+    font-size: 1rem;
+  }
+  
+  .input-group-custom .btn {
+    height: 45px;
+    font-size: 1rem;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Badge styling */
+  .badge-custom {
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 4px;
+  }
+  
+  /* Small × button in badge */
+  .badge-custom button {
+    padding: 2px 6px;
+    font-size: 12px;
+    line-height: 1;
+    border-radius: 50%;
+    margin-left: 4px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+
+
+  .ContainerOuter {
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+  
+  .profile-container {
+    max-width: 600px;
+  }
+  
+  .input-group-custom .form-control {
+    flex: 1;
+  }
+  
