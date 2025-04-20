@@ -4,6 +4,8 @@ import SkillExchangeNavbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Chat from "./pages/Chat";
 import ProfileForm from "./components/form";
+// import Sch from "./pages/ScheduleSession";
+import SessionForm from"./components/scform";
 import { ClerkLoaded, ClerkLoading } from "@clerk/clerk-react";
 
 function App() {
@@ -22,6 +24,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/profile" element={<ProfileForm />} /> 
+              <Route path="/schedule" element={<SessionForm />} />
               <Route path="/chat/:userEmail?" element={<Chat />} />
             </Routes>
           </main>
