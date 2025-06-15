@@ -13,7 +13,7 @@ const app = express();
 const server = http.createServer(app);
 
 // Middleware
-const allowedOrigin = process.env.CLIENT_URL || 'http://localhost:5173';
+const allowedOrigin = process.env.CLIENT_URL;
 
 app.use(cors({
   origin: allowedOrigin,
