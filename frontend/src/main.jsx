@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { ClerkProvider } from '@clerk/clerk-react';
 import ChatProvider from './contexts/ChatContext.jsx';
 
-
+//YES
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 
 if (!PUBLISHABLE_KEY) {
