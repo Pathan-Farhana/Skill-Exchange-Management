@@ -26,6 +26,9 @@ app.options("*", cors({
 }));
 
 app.use(express.json());
+//app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 
 // Connect to MongoDB YES
 mongoose
